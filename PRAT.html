@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head runat="server">
@@ -14,12 +13,6 @@
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/caedfdc778.js" crossorigin="anonymous"></script>
     <script>
-        function strikeThroughText(event) {
-            event.preventDefault(); 
-            event.target.classList.toggle("strikethrough"); 
-        }
-    </script>
-    <script>
         function searchCertificates() {
             const query = document.getElementById('searchInput').value.toLowerCase();
             const certificateLinks = document.querySelectorAll('.certificate-link');
@@ -30,20 +23,21 @@
             });
         }
     </script>
-
+    <style>
+        .strikethrough {
+            text-decoration: line-through;
+        }
+    </style>
 </head>
 
 <body>
-
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 text-center">
-
                 <div class="d-flex align-items-center">
                     <img src="assets/mscemain.png" alt="MainLogo" height="150" width="150" class="mt-4" />
-
                     <div class="ml-2 mt-2">
-                        <div class=" text-black fs-5 fw-bold mt-4">
+                        <div class="text-black fs-5 fw-bold mt-4">
                             <span class="fw-bolder">महाराष्ट्र राज्य परीक्षा परिषद, पुणे
                                 <br />
                                 MAHARASHTRA STATE COUNCIL OF EXAMINATION,PUNE
@@ -55,29 +49,20 @@
                     <img src="assets/logo2.png" alt="MainLogo" height="120" width="100" class="mt-4" />
                 </div>
             </div>
-
-            <div class="col-md-1"></div>
-            <div class="col-md-3 mt-2">
-                <div class="text-end">
-                </div>
-
-            </div>
-
         </div>
-
     </div>
-
 
     <hr />
 
- <!-- Search Bar -->
- <div class="container-fluid mt-2">
-    <div class="row">
-        <div class="col-md-6 text-center mx-auto">
-            <input type="text" id="searchInput" class="form-control" placeholder="Search certificates..." onkeyup="searchCertificates()" />
+    <!-- Search Bar -->
+    <div class="container-fluid mt-2">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <input type="text" id="searchInput" class="form-control" placeholder="Search certificates..." onkeyup="searchCertificates()" />
+            </div>
         </div>
     </div>
-</div>
+
     <div class="container-fluid mt-2">
         <div class="row">
             <div class="col-md-4 mx-auto">
@@ -98,7 +83,7 @@
                     <li><a class="certificate-link" style="text-decoration: none" class="text-black" href="Cerificates/GCC-Certificates/NameCorrection/6401110265.pdf"><i class="fa-solid fa-download"></i>&#160;&#160;6401110265</a></li>
                     <li><a class="certificate-link" style="text-decoration: none" class="text-black" href="Cerificates/GCC-Certificates/NameCorrection/6401210212.pdf"><i class="fa-solid fa-download"></i>&#160;&#160;6401210212</a></li>
                     <li><a class="certificate-link" style="text-decoration: none" class="text-black" href="Cerificates/GCC-Certificates/NameCorrection/6501100197.pdf"><i class="fa-solid fa-download"></i>&#160;&#160;6501100197</a></li>
-                    <li><a class="certificate-link" style="text-decoration: none" class="text-black" href="Cerificates/GCC-Certificates/NameCorrection/6501110224.pdf"><i class="fa-solid fa-download"></i>&#160;&#160;6501110224</a><img src="assets/NEW.gif" height="25px"></li>
+                    <li><a class="certificate-link" style="text-decoration: none" class="text-black" href="Cerificates/GCC-Certificates/NameCorrection/6501110224.pdf"><i class="fa-solid fa-download"></i>&#160;&#160;6501110224</a></li>
                     <li><a class="certificate-link" style="text-decoration: none" class="text-black" href="Cerificates/GCC-Certificates/NameCorrection/6501210273.pdf"><i class="fa-solid fa-download"></i>&#160;&#160;6501210273</a></li>
                 </ul>
             </div>
@@ -121,50 +106,25 @@
                     <li><a class="certificate-link" style="text-decoration: none" class="text-black" href="Cerificates/GCC-TBC-Certificates/NameCorrection/6207210145.pdf"><i class="fa-solid fa-download"></i>&#160;&#160;6207210145</a></li>
                     <li><a class="certificate-link" style="text-decoration: none" class="text-black" href="Cerificates/GCC-TBC-Certificates/NameCorrection/6207210147.pdf"><i class="fa-solid fa-download"></i>&#160;&#160;6207210147</a></li>
                     <li><a class="certificate-link" style="text-decoration: none" class="text-black" href="Cerificates/GCC-TBC-Certificates/NameCorrection/6207210148.pdf"><i class="fa-solid fa-download"></i>&#160;&#160;6207210148</a></li>
-                    <li><a class="certificate-link" style="text-decoration: none" class="text-black" href="Cerificates/GCC-TBC-Certificates/NameCorrection/6107262217.pdf"><i class="fa-solid fa-download"></i>&#160;&#160;6107262217</a><img src="assets/NEW.gif" height="25px"></li>
                 </ul>
             </div>
+
             <div class="col-md-4 mx-auto">
-                <h4 class="fw-bold">GCC-SSD-CTC-Certificate</h4>
+                <h4 class="fw-bold">GCC-TTC-Certificate</h4>
                 <hr style="width: 50%" class="border border-danger border-2 opacity-100">
                 <ul class="list-unstyled">
                     <p class="fw-bold">Duplicate</p>
-                    <!--<li><a href="Cerificates/GCC-Certificates/Duplicate/6310110113.pdf"><i class="fa-solid fa-download"></i>&#160;&#160;6310110113</a></li>
-                    <li><a href="Cerificates/GCC-Certificates/Duplicate/6310110113.pdf"><i class="fa-solid fa-download"></i>&#160;&#160;6310110113</a></li>
-                --> <hr>
+                    <li><a class="certificate-link" style="text-decoration: none" class="text-black" href="Cerificates/GCC-TTC-Certificates/Duplicate/6201250721.pdf"><i class="fa-solid fa-download"></i>&#160;&#160;6201250721</a></li>
+                    <hr>
                     <p class="fw-bold">Name Correction</p>
-                    <!--<li><a href="Cerificates/GCC-Certificates/Duplicate/6404120163.pdf"><i class="fa-solid fa-download"></i>&#160;&#160;6404120163</a></li>
-                -->
-
+                    <li><a class="certificate-link" style="text-decoration: none" class="text-black" href="Cerificates/GCC-TTC-Certificates/NameCorrection/6204210376.pdf"><i class="fa-solid fa-download"></i>&#160;&#160;6204210376</a></li>
+                    <li><a class="certificate-link" style="text-decoration: none" class="text-black" href="Cerificates/GCC-TTC-Certificates/NameCorrection/6207210115.pdf"><i class="fa-solid fa-download"></i>&#160;&#160;6207210115</a></li>
+                    <li><a class="certificate-link" style="text-decoration: none" class="text-black" href="Cerificates/GCC-TTC-Certificates/NameCorrection/6207210116.pdf"><i class="fa-solid fa-download"></i>&#160;&#160;6207210116</a></li>
+                    <li><a class="certificate-link" style="text-decoration: none" class="text-black" href="Cerificates/GCC-TTC-Certificates/NameCorrection/6207210124.pdf"><i class="fa-solid fa-download"></i>&#160;&#160;6207210124</a></li>
                 </ul>
             </div>
         </div>
     </div>
-
-    <hr>
-
-
-
-    <footer class="footer">
-        <div class="container-fluid mt-2">
-
-            <div class="row">
-                <div class="col-md-12">
-                    <p class="text-center">
-                        Copyright &copy; 2024-25
-                        <br />
-                        <img src="assets/LOGOVIKAS.svg" alt="Logo 1" style="height: 55px;" />
-                        <br />
-                        Developed and Maintained by:
-                        VIKAS PAWAR.<br />
-                       
-                        All Rights Reserved.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-    </footer>
 </body>
 
 </html>
