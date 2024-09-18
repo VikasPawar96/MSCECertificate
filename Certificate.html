@@ -187,5 +187,17 @@
 
     </footer>
 </body>
-
+    <!--Right Click Disable S-->
+    <script type="text/javascript">  
+        var message = "Not Allowed!";
+    
+        function click(event) {
+            if (event.which == 2 || event.which == 3) {
+                alert(message);
+                return false;
+            }
+        }
+        document.addEventListener("mousedown", click);
+        document.oncontextmenu = new Function("return false");
+    </script>
 </html>
