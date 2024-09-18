@@ -19,6 +19,8 @@
             event.target.classList.toggle("strikethrough"); 
         }
     </script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
     <script>
         function searchCertificates() {
             const query = document.getElementById('searchInput').value.toLowerCase();
@@ -34,7 +36,22 @@
 </head>
 
 <body style="background-color: #EFECEC;">
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" id="closeBtn">&times;</span>
+            <h2 class="text-danger">IMPORTANT NOTE!</h2>
+            <p>
+                
+Please note the certificate will only appear for 7 days from the uploaded date; after 7 days, you will not be able to download or view the certificate.
 
+                 
+                <br>
+                
+कृपया लक्षात घ्या की प्रमाणपत्र अपलोड केलेल्या तारखेपासून केवळ 7 दिवसांसाठी दिसेल; 7 दिवसांनंतर तुम्ही सर्टिफिकेट डाऊनलोड किंवा पाहू शकणार नाही.
+
+            </p>
+        </div>
+    </div>
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 text-center">
@@ -95,12 +112,12 @@
                     <li><a class="certificate-link" style="text-decoration: none" class="text-black" href="Cerificates/GCC-Certificates/Duplicate/5402210823.pdf"><i class="fa-solid fa-download"></i>&#160;&#160;5402210823</a></li>
                 --> 
                     <!--18 September, 2024 GCC Duplicate Certificate Starts-->
-                <li><a class="certificate-link" style="text-decoration: none" class="text-black" href="Cerificates/GCC-Certificates/Duplicate/18-09-2024/081000055.pdf"><i class="fa-solid fa-download"></i>&#160;&#160;081000055</a>&#160;&#160;<img src="assets/new-svg.svg" height="30px"></li>
-                <li><a class="certificate-link" style="text-decoration: none" class="text-black" href="Cerificates/GCC-Certificates/Duplicate/18-09-2024/082100425.pdf"><i class="fa-solid fa-download"></i>&#160;&#160;082100425</a>&#160;&#160;<img src="assets/new-svg.svg" height="30px"></li>
-                <li><a class="certificate-link" style="text-decoration: none" class="text-black" href="Cerificates/GCC-Certificates/Duplicate/18-09-2024/1603100054.pdf"><i class="fa-solid fa-download"></i>&#160;&#160;1603100054</a>&#160;&#160;<img src="assets/new-svg.svg" height="30px"></li>
-                <li><a class="certificate-link" style="text-decoration: none" class="text-black" href="Cerificates/GCC-Certificates/Duplicate/18-09-2024/2303110507.pdf"><i class="fa-solid fa-download"></i>&#160;&#160;2303110507</a>&#160;&#160;<img src="assets/new-svg.svg" height="30px"></li>
-                <li><a class="certificate-link" style="text-decoration: none" class="text-black" href="Cerificates/GCC-Certificates/Duplicate/18-09-2024/8251600056.pdf"><i class="fa-solid fa-download"></i>&#160;&#160;8251600056</a>&#160;&#160;<img src="assets/new-svg.svg" height="30px"></li>
-                <li><a class="certificate-link" style="text-decoration: none" class="text-black" href="Cerificates/GCC-Certificates/Duplicate/18-09-2024/8315111166.pdf"><i class="fa-solid fa-download"></i>&#160;&#160;8315111166</a>&#160;&#160;<img src="assets/new-svg.svg" height="30px"></li>
+                <li><a class="certificate-link" style="text-decoration: none" class="text-black" href="Cerificates/GCC-Certificates/Duplicate/18-09-2024/081000055.pdf"><i class="fa-solid fa-download"></i>&#160;&#160;081000055</a>&#160;&#160;<img src="assets/new-svg.svg" height="30px">&#160;&#160;(18/09/2024)</li>
+                <li><a class="certificate-link" style="text-decoration: none" class="text-black" href="Cerificates/GCC-Certificates/Duplicate/18-09-2024/082100425.pdf"><i class="fa-solid fa-download"></i>&#160;&#160;082100425</a>&#160;&#160;<img src="assets/new-svg.svg" height="30px">&#160;&#160;(18/09/2024)</li>
+                <li><a class="certificate-link" style="text-decoration: none" class="text-black" href="Cerificates/GCC-Certificates/Duplicate/18-09-2024/1603100054.pdf"><i class="fa-solid fa-download"></i>&#160;&#160;1603100054</a>&#160;&#160;<img src="assets/new-svg.svg" height="30px">&#160;&#160;(18/09/2024)</li>
+                <li><a class="certificate-link" style="text-decoration: none" class="text-black" href="Cerificates/GCC-Certificates/Duplicate/18-09-2024/2303110507.pdf"><i class="fa-solid fa-download"></i>&#160;&#160;2303110507</a>&#160;&#160;<img src="assets/new-svg.svg" height="30px">&#160;&#160;(18/09/2024)</li>
+                <li><a class="certificate-link" style="text-decoration: none" class="text-black" href="Cerificates/GCC-Certificates/Duplicate/18-09-2024/8251600056.pdf"><i class="fa-solid fa-download"></i>&#160;&#160;8251600056</a>&#160;&#160;<img src="assets/new-svg.svg" height="30px">&#160;&#160;(18/09/2024)</li>
+                <li><a class="certificate-link" style="text-decoration: none" class="text-black" href="Cerificates/GCC-Certificates/Duplicate/18-09-2024/8315111166.pdf"><i class="fa-solid fa-download"></i>&#160;&#160;8315111166</a>&#160;&#160;<img src="assets/new-svg.svg" height="30px">&#160;&#160;(18/09/2024)</li>
                    <!--18 September, 2024 GCC Duplicate Certificate Ends-->  
                 
                 <hr>
@@ -116,9 +133,9 @@
                     <li><a class="certificate-link" style="text-decoration: none" class="text-black" href="Cerificates/GCC-Certificates/NameCorrection/NEW/5501210621.pdf"><i class="fa-solid fa-download"></i>&#160;&#160;5501210621</a>&#160;&#160;(Old Dated:12/09/2024)</li>
                     <li><a class="certificate-link" style="text-decoration: none" class="text-black" href="Cerificates/GCC-Certificates/NameCorrection/NEW/8351530355.pdf"><i class="fa-solid fa-download"></i>&#160;&#160;8351530355</a>&#160;&#160;(Old Dated:12/09/2024)</li>
                     <!--18 September, 2024 GCC Name Correction Starts-->
-                    <li><a class="certificate-link" style="text-decoration: none" class="text-black" href="Cerificates/GCC-Certificates/NameCorrection/18-09-2024/5306100060.pdf"><i class="fa-solid fa-download"></i>&#160;&#160;5306100060</a>&#160;&#160;<img src="assets/new-svg.svg" height="30px"></li>
-                    <li><a class="certificate-link" style="text-decoration: none" class="text-black" href="Cerificates/GCC-Certificates/NameCorrection/18-09-2024/5306110047.pdf"><i class="fa-solid fa-download"></i>&#160;&#160;5306110047</a>&#160;&#160;<img src="assets/new-svg.svg" height="30px"></li>
-                    <li><a class="certificate-link" style="text-decoration: none" class="text-black" href="Cerificates/GCC-Certificates/NameCorrection/18-09-2024/5306210034.pdf"><i class="fa-solid fa-download"></i>&#160;&#160;5306210034</a>&#160;&#160;<img src="assets/new-svg.svg" height="30px"></li>
+                    <li><a class="certificate-link" style="text-decoration: none" class="text-black" href="Cerificates/GCC-Certificates/NameCorrection/18-09-2024/5306100060.pdf"><i class="fa-solid fa-download"></i>&#160;&#160;5306100060</a>&#160;&#160;<img src="assets/new-svg.svg" height="30px">&#160;&#160;(18/09/2024)</li>
+                    <li><a class="certificate-link" style="text-decoration: none" class="text-black" href="Cerificates/GCC-Certificates/NameCorrection/18-09-2024/5306110047.pdf"><i class="fa-solid fa-download"></i>&#160;&#160;5306110047</a>&#160;&#160;<img src="assets/new-svg.svg" height="30px">&#160;&#160;(18/09/2024)</li>
+                    <li><a class="certificate-link" style="text-decoration: none" class="text-black" href="Cerificates/GCC-Certificates/NameCorrection/18-09-2024/5306210034.pdf"><i class="fa-solid fa-download"></i>&#160;&#160;5306210034</a>&#160;&#160;<img src="assets/new-svg.svg" height="30px">&#160;&#160;(18/09/2024)</li>
                     <!--18 September, 2024 GCC Name Correction Ends-->
                     
                 </ul>
@@ -132,10 +149,10 @@
                     <!--<li><a class="certificate-link" style="text-decoration: none" class="text-black" href="Cerificates/GCC-TBC-Certificates/Duplicate/6301257331.pdf"><i class="fa-solid fa-download"></i>&#160;&#160;6301257331</a></li>
                 --> 
                      <!--18 September, 2024 GCC-TBC  DUPLICATE STARTS-->
-                <li><a class="certificate-link" style="text-decoration: none" class="text-black" href="Cerificates/GCC-TBC-Certificates/Duplicate/18-09-2024/1106151586.pdf"><i class="fa-solid fa-download"></i>&#160;&#160;1106151586</a>&#160;&#160;<img src="assets/new-svg.svg" height="30px"></li>
-                <li><a class="certificate-link" style="text-decoration: none" class="text-black" href="Cerificates/GCC-TBC-Certificates/Duplicate/18-09-2024/1202155308.pdf"><i class="fa-solid fa-download"></i>&#160;&#160;1202155308</a>&#160;&#160;<img src="assets/new-svg.svg" height="30px"></li>    
-                <li><a class="certificate-link" style="text-decoration: none" class="text-black" href="Cerificates/GCC-TBC-Certificates/Duplicate/18-09-2024/3112151171.pdf"><i class="fa-solid fa-download"></i>&#160;&#160;3112151171</a>&#160;&#160;<img src="assets/new-svg.svg" height="30px"></li>    
-                <li><a class="certificate-link" style="text-decoration: none" class="text-black" href="Cerificates/GCC-TBC-Certificates/Duplicate/18-09-2024/8302157244.pdf"><i class="fa-solid fa-download"></i>&#160;&#160;8302157244</a>&#160;&#160;<img src="assets/new-svg.svg" height="30px"></li>        
+                <li><a class="certificate-link" style="text-decoration: none" class="text-black" href="Cerificates/GCC-TBC-Certificates/Duplicate/18-09-2024/1106151586.pdf"><i class="fa-solid fa-download"></i>&#160;&#160;1106151586</a>&#160;&#160;<img src="assets/new-svg.svg" height="30px">&#160;&#160;(18/09/2024)</li>
+                <li><a class="certificate-link" style="text-decoration: none" class="text-black" href="Cerificates/GCC-TBC-Certificates/Duplicate/18-09-2024/1202155308.pdf"><i class="fa-solid fa-download"></i>&#160;&#160;1202155308</a>&#160;&#160;<img src="assets/new-svg.svg" height="30px">&#160;&#160;(18/09/2024)</li>    
+                <li><a class="certificate-link" style="text-decoration: none" class="text-black" href="Cerificates/GCC-TBC-Certificates/Duplicate/18-09-2024/3112151171.pdf"><i class="fa-solid fa-download"></i>&#160;&#160;3112151171</a>&#160;&#160;<img src="assets/new-svg.svg" height="30px">&#160;&#160;(18/09/2024)</li>    
+                <li><a class="certificate-link" style="text-decoration: none" class="text-black" href="Cerificates/GCC-TBC-Certificates/Duplicate/18-09-2024/8302157244.pdf"><i class="fa-solid fa-download"></i>&#160;&#160;8302157244</a>&#160;&#160;<img src="assets/new-svg.svg" height="30px">&#160;&#160;(18/09/2024)</li>        
                      <!--18 September, 2024 GCC-TBC  DUPLICATE ENDS-->
                 <hr>
                     <p class="fw-bold">Name Correction</p>
@@ -153,7 +170,7 @@
                 --> 
                     
                 <!--18 September, 2024 GCC-TBC Name Correction STARTS-->
-                <li><a class="certificate-link" style="text-decoration: none" class="text-black" href="Cerificates/GCC-TBC-Certificates/NameCorrection/18-09-2024/5306257040.pdf"><i class="fa-solid fa-download"></i>&#160;&#160;5306257040</a>&#160;&#160;<img src="assets/new-svg.svg" height="30px"></li>
+                <li><a class="certificate-link" style="text-decoration: none" class="text-black" href="Cerificates/GCC-TBC-Certificates/NameCorrection/18-09-2024/5306257040.pdf"><i class="fa-solid fa-download"></i>&#160;&#160;5306257040</a>&#160;&#160;<img src="assets/new-svg.svg" height="30px">&#160;&#160;(18/09/2024)</li>
                <!--18 September, 2024 GCC-TBC Name Correction Ends--> 
             </ul>
             </div>
