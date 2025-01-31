@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MSCE ID VERIFICATION</title>
+    <link href="assets/mscemain.png" rel="shortcut icon" type="image/x-icon" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/caedfdc778.js" crossorigin="anonymous"></script>
+    <script>
+        function strikeThroughText(event) {
+            event.preventDefault();
+            event.target.classList.toggle("strikethrough");
+        }
+    </script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function searchCertificates() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const certificateLinks = document.querySelectorAll('.certificate-link');
+
+            certificateLinks.forEach(link => {
+                const text = link.textContent.toLowerCase();
+                link.parentElement.style.display = text.includes(query) ? '' : 'none';
+            });
+        }
+    </script>
+
+</head>
+
+<body style="background-color: #EFECEC;">
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 text-center">
+
+                <div class="d-flex align-items-center">
+                    <img src="assets/mscemain.png" alt="MainLogo" height="150" width="150" class="mt-4" />
+
+                    <div class="ml-2 mt-2">
+                        <div class=" text-black fs-5 fw-bold mt-4">
+                            <span class="fw-bolder">महाराष्ट्र राज्य परीक्षा परिषद, पुणे
+                                <br />
+                                MAHARASHTRA STATE COUNCIL OF EXAMINATION,PUNE
+                                <br />
+                               ID Verification
+                            </span>
+                        </div>
+                    </div>
+                    <img src="assets/logo2.png" alt="MainLogo" height="120" width="100" class="mt-4" />
+                </div>
+            </div>
+
+            <div class="col-md-1"></div>
+            <div class="col-md-3 mt-2">
+                <div class="text-end">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <hr />
+<!-- user data-->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <p class="fw-bold fs-5" style="font-family: Georgia, 'Times New Roman', Times, serif;">EMPLOYEE DETAILS</p>
+        </div>
+    </div>
+    <table class="table table-bordered border-primary table-center">
+        <thead class="table-info">
+            <tr class="text-center">
+                <th>NAME OF EMPLOYEE :</th>
+                <th>EMAIL ID :</th>
+                <th>MOBILE NUMBER :</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><span id="userName" class="fw-bold text-danger"></span></td>
+                <td><span id="userEmail" class="fw-bold text-danger"></span></td>
+                <td><span id="userMobile" class="fw-bold text-danger"></span></td>
+            </tr>
+        </tbody>
+    </table>
+    <hr class="border border-primary border-1 opacity-75">
+    <table class="table table-bordered border-primary table-center">
+        <thead class="table-warning">
+            <tr class="text-center">
+                <th>DESIGNATION :</th>
+                <th>DEPARTMENT :</th>
+               
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><span id="userPosition" class="fw-bold text-danger"></span></td>
+                <td><span id="userDepartment" class="fw-bold text-danger"></span></td>
+                
+            </tr>
+        </tbody>
+    </table>
+
+    
+    <hr class="border border-primary border-1 opacity-75">
+    <table class="table table-bordered border-primary table-center">
+        <thead class="table-success">
+            <tr class="text-center">
+                <th>BLOODGROUP :</th>
+                <th>ID TYPE :</th>
+                <th>ID NUMBER :</th>
+               
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><span id="userBloodGroup" class="fw-bold text-danger"></span></td>
+                <td><span id="userIDType" class="fw-bold text-danger"></span></td>
+                <td><span id="userIDNo" class="fw-bold text-danger"></span></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<hr class="border border-danger border-1 opacity-75">
+<table class="table  table-bordered border-primary table-center">
+    <thead class="table-warning "> 
+        <tr class="text-center">
+            
+            <th>ADDRESS :</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            
+            <td><span id="userAddress" class="fw-bold text-danger"></span></td>
+        </tr>
+    </tbody>
+</table>
+<hr class="border border-primary border-1 opacity-75">
+<table class="table  table-bordered border-primary table-center">
+    <thead class="table-success "> 
+        <tr class="text-center">
+            
+            <th>VILLAGE/TOWN :</th>
+            <th>TALUKA :</th>
+            <th>DISTRICT :</th>
+            <th>PINCODE :</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            
+            <td><span id="userVillageTown" class="fw-bold text-danger"></span></td>
+            <td><span id="userTaluka" class="fw-bold text-danger"></span></td>
+            <td><span id="userDistrict" class="fw-bold text-danger"></span></td>
+            <td><span id="userPincode" class="fw-bold text-danger"></span></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<script>
+    // Sample user data (Replace with real API or database call)
+    const users = [
+        { id: 1, name: "Alice Johnson", email: "alice@example.com", mobile: "1234567890", position: "HR Manager", department: "Human Resources" },
+        { id: 2, name: "MR. VIKAS ANANT PAWAR", email: "VIKAS2101PAWAR@GMAIL.COM", mobile: "8669289173", position: "SOFTWARE ENGINEER", 
+        department: "COMPUTER DEPARTMENT", bloodgroup:"B -",idtype:"AADHAAR CARD",
+        identityno:"8282 6819 3261",address:"MATOSHRI NIWAS,SURVEY NUMBER: 658, NEAR VITHAL MANDIR, SONWADI",
+        villagetown:"SONWADI", taluka:"DAUND",district:"PUNE",pincode:"413801"
+    
+    },
+        { id: 3, name: "Charlie Brown", email: "charlie@example.com", mobile: "9876543210", position: "Team Lead", department: "Marketing" }
+    ];
+
+    // Function to get query parameters from URL
+    function getQueryParam(param) {
+        let urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+    }
+
+    // Get 'id' from URL query string
+    let userId = getQueryParam("id");
+
+    if (userId) {
+        // Convert userId to a number
+        userId = parseInt(userId, 10);
+
+        // Find user by ID
+        let user = users.find(u => u.id === userId);
+
+        if (user) {
+            // Populate user details on the page
+            document.getElementById("userName").textContent = user.name;
+            document.getElementById("userEmail").textContent = user.email;
+            document.getElementById("userMobile").textContent = user.mobile;
+            document.getElementById("userPosition").textContent = user.position;
+            document.getElementById("userDepartment").textContent = user.department;
+            document.getElementById("userBloodGroup").textContent = user.bloodgroup;
+            document.getElementById("userIDType").textContent = user.idtype;
+            document.getElementById("userIDNo").textContent = user.identityno;
+            document.getElementById("userAddress").textContent = user.address;
+            document.getElementById("userVillageTown").textContent = user.villagetown;
+            document.getElementById("userTaluka").textContent = user.taluka;
+            document.getElementById("userDistrict").textContent = user.district;
+            document.getElementById("userPincode").textContent = user.pincode;
+
+
+            // ✅ Change the URL to include encoded ID format (%272%27)
+            let newUrl = `IDVerify.html?id='%272%27'`;
+            if (window.history.replaceState) {
+                window.history.replaceState({}, document.title, newUrl);
+            }
+        } else {
+            // If user not found, show default values
+            displayNotFound();
+        }
+    } else {
+        // If no ID is provided in the URL
+        displayNotFound();
+    }
+
+    // Function to display "User Not Found" details
+    function displayNotFound() {
+        document.getElementById("userName").textContent = "User Not Found";
+        document.getElementById("userEmail").textContent = "N/A";
+        document.getElementById("userMobile").textContent = "N/A";
+        document.getElementById("userPosition").textContent = "N/A";
+        document.getElementById("userDepartment").textContent = "N/A";
+        document.getElementById("userBloodGroup").textContent = "N/A";
+        document.getElementById("userIDType").textContent = "N/A";
+        document.getElementById("userIDNo").textContent = "N/A";
+        document.getElementById("userAddress").textContent = "N/A";
+        document.getElementById("userVillageTown").textContent = "N/A";
+        document.getElementById("userTaluka").textContent = "N/A";
+        document.getElementById("userDistrict").textContent = "N/A";
+        document.getElementById("userPincode").textContent = "N/A";
+      
+    }
+</script>
+
+
+<!--<script>
+    // Sample user data (Replace with real API or database call)
+    const users = [
+        { id: 1, name: "Alice Johnson", email: "alice@example.com", mobile: "1234567890" },
+        { id: 2, name: "MR. VIKAS ANANT PAWAR", email: "VIKAS2101PAWAR@GMAIL.COM", mobile: "8669289173",position:"SOFTWARE ENGINEER", department:"COMPUTER DEPARTMENT"  },
+        { id: 3, name: "Charlie Brown", email: "charlie@example.com", mobile: "9876543210" }
+    ];
+
+    // Function to get query parameters from URL
+    function getQueryParam(param) {
+        let urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+    }
+
+    // Get 'id' from URL query string
+    let userId = getQueryParam("id");
+
+    if (userId) {
+        // Convert userId to a number
+        userId = parseInt(userId, 10);
+
+        // Find user by ID
+        let user = users.find(u => u.id === userId);
+
+        if (user) {
+            document.getElementById("userName").textContent = user.name;
+            document.getElementById("userEmail").textContent = user.email;
+            document.getElementById("userMobile").textContent = user.mobile || "N/A";
+            document.getElementById("userPosition").textContent = user.position ;
+            document.getElementById("userDepartment").textContent = user.department ;
+            
+        } else {
+            // If no user found, show default values
+            document.getElementById("userName").textContent = "User Not Found";
+            document.getElementById("userEmail").textContent = "N/A";
+            document.getElementById("userMobile").textContent = "N/A";
+            document.getElementById("userPosition").textContent = "N/A";
+            document.getElementById("userDepartment").textContent = "N/A";
+        }
+    } else {
+        // If no ID is provided in the URL
+        document.getElementById("userName").textContent = "No ID Provided";
+        document.getElementById("userEmail").textContent = "N/A";
+        document.getElementById("userMobile").textContent = "N/A";
+        document.getElementById("userPosition").textContent = "N/A";
+            document.getElementById("userDepartment").textContent = "N/A";
+    }
+</script>-->
+
+ <!--User data-->
+    <hr/>
+     <footer class="footer">
+        <div class="container-fluid mt-2">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="text-center">
+                        Copyright &copy; 2024-25
+                        <br />
+                        <img src="assets/mscemain.png" alt="Logo 1" style="height: 55px;" />
+                        <br />
+                        Developed and Maintained by:
+                        VIKAS PAWAR.<br />
+
+                        All Rights Reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+</body>
+<!--Right Click Disable S-->
+<script type="text/javascript">
+    var message = "Not Allowed!";
+
+    function click(event) {
+        if (event.which == 2 || event.which == 3) {
+            alert(message);
+            return false;
+        }
+    }
+    document.addEventListener("mousedown", click);
+    document.oncontextmenu = new Function("return false");
+</script>
+
+</html>
